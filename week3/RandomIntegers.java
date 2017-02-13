@@ -1,6 +1,7 @@
 package week3;
 
 import java.security.SecureRandom;
+import java.security.SecureRandom;
 
 public class RandomIntegers {
 	
