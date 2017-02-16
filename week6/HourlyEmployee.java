@@ -59,6 +59,12 @@ public class HourlyEmployee extends Employee {
 		return String.format("Hourly Employee: %s%n%s: $%.2f; %s: %.2f", 
 				super.toString(), "Hourly Wage", getWage(), "Hours Worked", getHours());
 	}
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
 
 

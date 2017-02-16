@@ -63,4 +63,10 @@ public class CommissionEmployeePolymorphism extends Employee {
 				"gross sales", getGrossSales(),
 				"commission rate", getCommissionRate());
 	}
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
