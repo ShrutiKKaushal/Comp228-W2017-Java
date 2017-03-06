@@ -1,2 +1,8 @@
 /LabelFrame.class
 /LabelTest.class
+/TextFieldFrame.class
+/TextFieldTest.class
+/TextFieldFrame$TextFieldHandler.class
+/ButtonFrame.class
+/ButtonTest.class
+/ButtonFrame$ButtonHandler.class
