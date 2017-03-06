@@ -30,7 +30,7 @@ public abstract class Employee implements Payable{
 		return String.format("%s %s %n Social Security Number: %s", getFirstName(), getLastName(), getSocialSecurityNumber());
 	}
 	
-	//Abstrat Earnings Method
+	//Abstract Earnings Method
 	public abstract double earnings();
 	
 	
