@@ -8,5 +8,5 @@ Weekly Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ####
 Week 1 - Understand Java 8 Platform. Explain the concept of JVM. Write simple Java applications with I/Ocapabilities using Eclipse IDE.
-Week 2 - Classes and Objectsin Java. Instance variables and instance methods. Primitives and Reference Types
+Week 2 - Classes and Objects in Java. Instance variables and instance methods. Primitives and Reference Types
 Week 3 - 
