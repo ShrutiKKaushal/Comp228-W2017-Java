@@ -4,3 +4,15 @@
 /SimpleArray.class
 /SharedArrayTest.class
 /ArrayWriter.class
+/BackgroundCalculator.class
+/BlockingBuffer.class
+/BlockingBufferTest.class
+/Buffer.class
+/Consumer.class
+/FibonacciNumbers$1.class
+/FibonacciNumbers$2.class
+/FibonacciNumbers.class
+/Producer.class
+/SharedBufferTest.class
+/SynchronizedBuffer.class
+/SynchronizedBuffer2.class

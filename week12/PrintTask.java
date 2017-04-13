@@ -2,37 +2,43 @@ package week12;
 
 import java.security.SecureRandom;
 
-public class PrintTask implements Runnable 
-{
-   private final static SecureRandom generator = new SecureRandom();
-   private final int sleepTime; // random sleep time for thread
-   private final String taskName; // name of task
-    
-   // constructor
-   public PrintTask(String taskName)
-   {
-      this.taskName = taskName;
-        
-      // pick random sleep time between 0 and 5 seconds
-      sleepTime = generator.nextInt(5000); // milliseconds
-   } 
+public class PrintTask implements Runnable {
 
-   // method run contains the code that a thread will execute
-   public void run() 
-   {
-      try // put thread to sleep for sleepTime amount of time 
-      {
-         System.out.printf("%s going to sleep for %d milliseconds.%n", 
-            taskName, sleepTime);
-         Thread.sleep(sleepTime); // put thread to sleep
-      }       
-      catch (InterruptedException exception)
-      {
-         exception.printStackTrace();
-         Thread.currentThread().interrupt(); // re-interrupt the thread
-      } 
-        
-      // print task name
-      System.out.printf("%s done sleeping%n", taskName); 
-   } 
-} // end class PrintTask
+	private final static SecureRandom generator = new SecureRandom();
+	private final int sleepTime; // Random sleep time for a thread
+	private final String taskName; // Name of the task being executed
+	
+	public PrintTask(String taskName) {
+		this.taskName = taskName;
+		
+		sleepTime = generator.nextInt(5000); // Set sleeptime to a number between 0 and 5000ms
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			System.out.printf("%s going to sleep for %d millisecond.%n", taskName, sleepTime);
+			Thread.sleep(sleepTime);
+		}
+		catch(InterruptedException e) { 
+			e.printStackTrace();
+			Thread.currentThread().interrupt();
+		}
+		
+		System.out.printf("%s done sleeping%n", taskName);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

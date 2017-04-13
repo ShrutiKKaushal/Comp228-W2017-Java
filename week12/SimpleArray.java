@@ -5,33 +5,48 @@ import java.util.Arrays;
 
 public class SimpleArray {
 	private static final SecureRandom generator = new SecureRandom();
-	private final int[] array; // the shared integer array
-	private int writeIndex = 0; // shared index of next element to write
-
-	public SimpleArray(int size){
+	private final int[] array;	// the shared integer array
+	private int writeIndex = 0; // shared index of element to write
+	
+	public SimpleArray(int size) {
 		array = new int[size];
 	}
-
+	
 	public synchronized void add(int value) {
-		int position = writeIndex; // store the write index
-
+		int position = writeIndex;
+		
 		try {
-			// put thread to sleep for 0-499 milliseconds
-			Thread.sleep(generator.nextInt(500));
-		} catch (InterruptedException ex) {
-			Thread.currentThread().interrupt(); // re-interrupt the thread
+			// Put thread to sleep (DEMONSTRATION PURPOSE ONLY)
+			Thread.sleep(generator.nextInt(500)); // Just for show
 		}
-		// put value in the appropriate element
+		catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+		
+		// Add value to array at index "position"
 		array[position] = value;
 		System.out.printf("%s wrote %2d to element %d.%n", Thread.currentThread().getName(), value, position);
-
+		
+		// Increment our writeIndex
 		writeIndex++;
 		System.out.printf("Next write index: %d%n", writeIndex);
 	}
-
-	// used for outputting the contents of the shared integer array
+	
+	// Format array to look nice
 	public synchronized String toString() {
 		return Arrays.toString(array);
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
